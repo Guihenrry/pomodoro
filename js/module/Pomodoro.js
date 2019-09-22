@@ -32,7 +32,7 @@ export default class Pomodoro {
   pushNotification() {
     Push.create('Pomodoro', {
       body: 'Acabou o Tempo',
-      icon: '/img/icon-push.png',
+      icon: 'img/icon-push.png',
       timeout: 4000,
       onClick() {
         window.focus();
