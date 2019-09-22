@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <title>Pomodoro</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Push.js -->
+  <script src="/js/lib/push.min.js"></script>
+</head>
+<body>
+
+  <audio src="./audio.mp3" data-pomodoro="audio"></audio>
+
+  <div class="progress">
+    <div data-pomodoro="progress" class="porgress-bar"></div>
+  </div>
+
+  <div class="buttons">
+    <button data-pomodoro="25" class="button active">Pomodoro</button>
+    <button data-pomodoro="5" class="button">Intervalo Curto</button>
+    <button data-pomodoro="10" class="button">Intervalo Longo</button>
+  </div>
+
+  <main data-pomodoro="display" class="display">00:00</main>
+
+  <div class="actions">
+    <button data-pomodoro="start" title="iniciar" class="actions-start">
+      <img src="/img/play.svg" alt="iniciar">
+    </button>
+
+    <button data-pomodoro="stop" title="pausar" class="actions-stop hide">
+      <img src="/img/pause.svg" alt="pausar">
+    </button>
+    
+    <button data-pomodoro="reset" title="resetar" class="actions-reset">
+      <img src="/img/rotate.svg" alt="resetar">
+    </button>
+  </div>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>
